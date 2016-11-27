@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AmoFinance</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=cyrillic">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="">
+    <div class="block">
+        <div class="block-header">
+            <h3 class="block-header__title">Список доходов</h3>
+            <button class="settings"><i class="fa fa-ellipsis-v"></i></button>
+        </div>
+        <ul class="block-tabs">
+            <li><a class="active" href="#">Все записи</a></li>
+            <li><a href="#">Только запланированные</a></li>
+            <li><a href="#">Только регулярные</a></li>
+            <li><a href="#">Только совершенные</a></li>
+            <li><a href="#">Только просроченные</a></li>
+        </ul>
+        <div class="table full-width">
+            <table>
+                <tr>
+                    <th class="active">Дата <i class="fa fa-caret-down"></i></th>
+                    <th>Сумма <i class="fa fa-caret-down"></i></th>
+                    <th></th>
+                    <th>Контрагент <i class="fa fa-caret-down"></i></th>
+                    <th>Категория <i class="fa fa-caret-down"></i></th>
+                    <th>Комментарий <i class="fa fa-caret-down"></i></th>
+                </tr>
+                <tr class="with-helper">
+                    <td data-column-type="date">
+                        <div>15.06.2019</div>
+                        <div class="status"><a href="#"><i class="fa fa-refresh"></i></a></div>
+                    </td>
+                    <td data-column-type="price">91 990 <i class="fa fa-rub"></i></td>
+                    <td data-column-type="progress">
+                        <div class="progress"><span style="width: 60%;"></span></div>
+                    </td>
+                    <td data-column-type="agent">PunicApp</td>
+                    <td data-column-type="category">Прочие поступления</td>
+                    <td data-column-type="comment">Продал Владимира <a href="#"><i class="fa fa-pencil"></i></a></td>
+                </tr>
+                <tr class="helper">
+                    <td colspan="2">Повторять <a href="#">каждые 30 дней</a></td>
+                    <td colspan="3"></td>
+                    <td>Последний платёж был проведён 19 мая 2019</td>
+                </tr>
+                <tr>
+                    <td data-column-type="date">
+                        <div>15.06.2019</div>
+                        <div class="status"><i class="fa fa-clock-o"></i></div>
+                    </td>
+                    <td data-column-type="price">19 190 <i class="fa fa-rub"></i></td>
+                    <td data-column-type="progress">
+                        <div class="progress"><span style="width: 10%;"></span></div>
+                    </td>
+                    <td data-column-type="agent">PunicApp</td>
+                    <td data-column-type="category">Прочие поступления</td>
+                    <td data-column-type="comment">... <a href="#"><i class="fa fa-pencil"></i></a></td>
+                </tr>
+                <tr>
+                    <td data-column-type="date">
+                        <div>15.06.2019</div>
+                        <div class="status"><i class="fa fa-check"></i></div>
+                    </td>
+                    <td data-column-type="price">190 920 <i class="fa fa-rub"></i></td>
+                    <td data-column-type="progress">
+                        <div class="progress"><span style="width: 100%;"></span></div>
+                    </td>
+                    <td data-column-type="agent">PunicApp</td>
+                    <td data-column-type="category">Прочие поступления</td>
+                    <td data-column-type="comment">... <a href="#"><i class="fa fa-pencil"></i></a></td>
+                </tr>
+                <tr>
+                    <td class="active" data-column-type="date">
+                        <div>15.06.2019</div>
+                        <div class="status"></div>
+                    </td>
+                    <td data-column-type="price">81 190 <i class="fa fa-rub"></i></td>
+                    <td data-column-type="progress">
+                        <div class="progress"><span style="width: 40%;"></span></div>
+                    </td>
+                    <td data-column-type="agent">PunicApp</td>
+                    <td data-column-type="category">Прочие поступления</td>
+                    <td data-column-type="comment">... <a href="#"><i class="fa fa-pencil"></i></a></td>
+                </tr>
+                <tr class="with-helper">
+                    <td class="active" data-column-type="date">
+                        <div>15.06.2019</div>
+                        <div class="status warning"><i class="fa fa-warning"></i></div>
+                    </td>
+                    <td data-column-type="price">91 990 <i class="fa fa-rub"></i></td>
+                    <td rowspan="2" data-column-type="progress">
+                        <a class="approval" href="#">Одобрить платеж</a>
+                    </td>
+                    <td data-column-type="agent">PunicApp</td>
+                    <td data-column-type="category">Прочие поступления</td>
+                    <td data-column-type="comment">... <a href="#"><i class="fa fa-pencil"></i></a></td>
+                </tr>
+                <tr class="helper">
+                    <td colspan="2">Ждёт одобрения</td>
+                    <td colspan="2"></td>
+                    <td>Ожидает одобрения уже 2 дня</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

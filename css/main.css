@@ -1,0 +1,208 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button {
+  outline: none; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background: #f2f2f2; }
+
+.container {
+  margin-top: 125px;
+  margin-left: 300px;
+  padding-right: 30px; }
+
+.block {
+  padding: 25px;
+  background: #f8f7f7;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15); }
+  .block-header {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 25px; }
+    .block-header__title {
+      font-size: 32px;
+      font-weight: 300;
+      color: #19291e; }
+    .block-header .settings {
+      font-size: 18px;
+      border: 0;
+      color: #757575;
+      background: none;
+      cursor: pointer;
+      margin-left: auto; }
+  .block-tabs {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    margin-bottom: 25px; }
+    .block-tabs li {
+      margin-right: 35px;
+      line-height: 32px; }
+      .block-tabs li:last-child {
+        margin-right: 0; }
+    .block-tabs a {
+      font-size: 18px;
+      font-weight: 300;
+      color: #ccd3ce; }
+      .block-tabs a:hover {
+        color: #4fcba1;
+        text-decoration: none; }
+      .block-tabs a.active {
+        font-weight: 500;
+        color: #4fcba1;
+        text-decoration: none; }
+  .block .full-width {
+    margin-left: -25px;
+    margin-right: -25px; }
+  .block .table {
+    overflow-x: auto; }
+    .block .table table {
+      white-space: nowrap;
+      width: 100%; }
+      .block .table table tr {
+        border-bottom: 1px solid #e0e0e0; }
+        .block .table table tr:first-child {
+          border-color: #c5c5c5; }
+      .block .table table th, .block .table table td {
+        padding-top: 20px;
+        padding-right: 15px;
+        padding-bottom: 20px; }
+        .block .table table th:first-child, .block .table table td:first-child {
+          padding-left: 25px; }
+        .block .table table th:last-child, .block .table table td:last-child {
+          padding-right: 25px; }
+      .block .table table tr.with-helper {
+        border-bottom: 0; }
+        .block .table table tr.with-helper td {
+          padding-bottom: 5px; }
+      .block .table table tr.helper td {
+        padding-top: 0;
+        color: #ababab; }
+      .block .table table tr.helper a {
+        text-decoration: underline;
+        color: #4fcba1; }
+      .block .table table th {
+        text-align: left;
+        font-size: 16px;
+        font-weight: 300;
+        opacity: 0.35; }
+        .block .table table th.active {
+          font-weight: 500;
+          opacity: 1; }
+      .block .table table td {
+        font-weight: 300; }
+      .block .table table [data-column-type="date"] {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        font-weight: 500;
+        color: #ababab; }
+        .block .table table [data-column-type="date"] a {
+          color: #ababab; }
+        .block .table table [data-column-type="date"].active {
+          color: #2e2e2e; }
+        .block .table table [data-column-type="date"] .status {
+          position: relative;
+          width: 16px;
+          height: 16px;
+          margin-left: 10px; }
+          .block .table table [data-column-type="date"] .status.warning {
+            color: #ffb400; }
+      .block .table table [data-column-type="price"] {
+        font-weight: 500;
+        color: #02e34a; }
+      .block .table table [data-column-type="comment"] a {
+        text-decoration: none;
+        color: #757575; }
+      .block .table table .progress {
+        position: relative;
+        width: 100%;
+        min-width: 215px;
+        height: 12px; }
+        .block .table table .progress span {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 0;
+          height: 12px;
+          background: #02e34a; }
+      .block .table table .approval {
+        display: block;
+        width: 100%;
+        min-width: 215px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background: #ffb400;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.18);
+        -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.18);
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.18); }
+        .block .table table .approval:hover {
+          background: #f5ad00; }
+
+/*# sourceMappingURL=main.css.map */

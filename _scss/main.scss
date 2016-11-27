@@ -1,0 +1,232 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background: $color-bg;
+}
+
+.container {
+  margin-top: 125px;
+  margin-left: 300px;
+  padding-right: 30px;
+}
+
+.block {
+  padding: $block-padding;
+  background: $color-block;
+  @include border-radius(10px);
+  @include box-shadow(0, 3px, 5px, rgba(0, 0, 0, 0.15));
+
+  &-header {
+    @include flex();
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: $block-padding;
+
+    &__title {
+      font-size: 32px;
+      font-weight: 300;
+      color: $color-green;
+    }
+
+    .settings {
+      font-size: 18px;
+      border: 0;
+      color: $color-gray;
+      background: none;
+      cursor: pointer;
+      margin-left: auto;
+    }
+  }
+
+  &-tabs {
+    @include flex();
+    flex-grow: 1;
+    flex-wrap: wrap;
+    margin-bottom: $block-padding;
+
+    li {
+      margin-right: 35px;
+      line-height: 32px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      font-size: 18px;
+      font-weight: 300;
+      color: $color-tabs-link;
+
+      &:hover {
+        color: $color-tabs-link-hover;
+        text-decoration: none;
+      }
+
+      &.active {
+        font-weight: 500;
+        color: $color-tabs-link-hover;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .full-width {
+    margin-left: -$block-padding;
+    margin-right: -$block-padding;
+  }
+
+  .table {
+    overflow-x: auto;
+
+    table {
+      white-space: nowrap;
+      width: 100%;
+
+      tr {
+        border-bottom: 1px solid $color-gray4;
+
+        &:first-child {
+          border-color: $color-gray2;
+        }
+      }
+
+      th, td {
+        padding-top: 20px;
+        padding-right: 15px;
+        padding-bottom: 20px;
+
+        &:first-child {
+          padding-left: $block-padding;
+        }
+
+        &:last-child {
+          padding-right: $block-padding;
+        }
+      }
+
+      tr.with-helper {
+        border-bottom: 0;
+
+        td {
+          padding-bottom: 5px;
+        }
+      }
+
+      tr.helper {
+
+        td {
+          padding-top: 0;
+          color: $color-gray3;
+        }
+
+        a {
+          text-decoration: underline;
+          color: $color-tabs-link-hover;
+        }
+      }
+
+      th {
+        text-align: left;
+        font-size: 16px;
+        font-weight: 300;
+        opacity: 0.35;
+
+        &.active {
+          font-weight: 500;
+          opacity: 1;
+        }
+      }
+
+      td {
+        font-weight: 300;
+      }
+
+      [data-column-type="date"] {
+        @include flex();
+        font-weight: 500;
+        color: $color-gray3;
+
+        a {
+          color: $color-gray3;
+        }
+
+        &.active {
+          color: $color-black;
+        }
+
+        .status {
+          position: relative;
+          width: 16px;
+          height: 16px;
+          margin-left: 10px;
+
+          &.warning {
+            color: $color-yellow;
+          }
+        }
+      }
+
+      [data-column-type="price"] {
+        font-weight: 500;
+        color: $color-progress-green;
+      }
+
+      [data-column-type="agent"] {
+      }
+
+      [data-column-type="comment"] {
+        a {
+          text-decoration: none;
+          color: $color-gray;
+        }
+      }
+
+      .progress {
+        position: relative;
+        width: 100%;
+        min-width: 215px;
+        height: 12px;
+
+        span {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 0;
+          height: 12px;
+          background: $color-progress-green;
+        }
+      }
+
+      .approval {
+        display: block;
+        width: 100%;
+        min-width: 215px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-align: center;
+        text-decoration: none;
+        color: $color-white;
+        background: $color-yellow;
+        @include border-radius(5px);
+        @include box-shadow(0, 2px, 3px, rgba(0, 0, 0, 0.18));
+
+        &:hover {
+          background: darken($color-yellow, 2%);
+        }
+      }
+    }
+  }
+}
