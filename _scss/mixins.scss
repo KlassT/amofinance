@@ -17,3 +17,25 @@
   display: -ms-flexbox;
   display: flex;
 }
+
+@mixin flex-direction($type) {
+  -webkit-flex-direction: $type;
+  -ms-flex-direction: $type;
+  flex-direction: $type;
+}
+
+@mixin animation($data) {
+  -webkit-transition: $data;
+  -moz-transition: $data;
+  -ms-transition: $data;
+  -o-transition: $data;
+  transition: $data;
+}
+
+@mixin transform($func) {
+  -webkit-transform: $func;
+  -moz-transform: $func;
+  -ms-transform: $func;
+  -o-transform: $func;
+  transform: $func;
+}
